@@ -7,9 +7,6 @@ from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 
-SNDVOLSSOF = 0x1
-SNDVOLSSOS = 0x2
-
 def set_system_volume(volume_level):
     devices = AudioUtilities.GetSpeakers()
     interface = devices.Activate(
